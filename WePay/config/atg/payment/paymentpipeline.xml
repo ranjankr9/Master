@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pipelinemanager PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Pipeline Manager//EN" "http://www.atg.com/dtds/pipelinemanager/pipelinemanager_1.0.dtd">
+
+<pipelinemanager>	
+
+	<!-- We Pay Payment pipeline -->
+	<pipelinechain name="wePayProcessorChain" transaction="TX_REQUIRED" headlink="createWePayInfo">
+		<pipelinelink transaction="TX_MANDATORY" name="createWePayInfo">
+			<processor jndi="/commerce/payment/processor/CreateWePayInfo" />
+			<transition returnvalue="1" link="processWePay" />
+		</pipelinelink>
+		<pipelinelink transaction="TX_MANDATORY" name="processWePay">
+			<processor jndi="/commerce/payment/processor/ProcessWePay" />
+		</pipelinelink>
+	</pipelinechain>
+	
+</pipelinemanager>
+

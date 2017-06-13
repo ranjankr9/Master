@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+ATG-Product: RedBarrel Commerce Integration Layer
+ATG-Required: DCS
+ATG-Config-Path: config
+ATG-Class-Path: lib/classes.jar lib/commons-codec-1.2.jar lib/commons-
+ httpclient-3.1.jar lib/commons-logging-1.0.4.jar 
+
+Name: security
+ATG-Assembler-Import-File: true
+
