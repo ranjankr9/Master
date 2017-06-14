@@ -15,7 +15,7 @@
 	<!-- STARTS : JS Source configuration -->
 	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GW5NF4cL3N7Gsp4px1Ka1XzgRTO1pukZ"></script>
-	<script type="text/javascript" src="../js/storeLocator.js"></script>
+	<script type="text/javascript" src="../js/storeLocator.js"></script>	
 	<!-- ENDS : JS Source configuration -->
 	
 	<!-- STARTS : Title configuration -->
@@ -63,26 +63,5 @@
 		    </div>
 	    </div>
 	</div>
-	<script type="text/javascript">
-	var map = new BMap.Map("map_canvas");
-	var point = new BMap.Point(116.404, 39.915);
-	map.centerAndZoom(point, 18);
-	/* function addMarker(point){
-	  var marker = new BMap.Marker(point);
-	  map.addOverlay(marker);
-	} */
-	var bounds = map.getBounds();
-	var sw = bounds.getSouthWest();
-	var ne = bounds.getNorthEast();
-	var lngSpan = Math.abs(sw.lng - ne.lng);
-	var latSpan = Math.abs(ne.lat - sw.lat);
-	var points = [];
-	for (var i = 0; i < 25; i ++) {
-		var point = new BMap.Point(sw.lng + lngSpan * (Math.random() * 0.7), ne.lat - latSpan * (Math.random() * 0.7));
-		var marker = new BMap.Marker(point);
-		map.addOverlay(marker);
-		points.push(point);
-	}
-</script>
 </body>
 </html>
