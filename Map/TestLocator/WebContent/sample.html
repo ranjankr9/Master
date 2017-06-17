@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+</style>
+<script type="text/javascript" src="js/search.js"></script>
+<!-- <script  type="text/javascript" src="http://api.map.baidu.com/geocoder/v2/?callback=renderOption&output=json&address=Beijing&ak=GW5NF4cL3N7Gsp4px1Ka1XzgRTO1pukZ"></script> -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GW5NF4cL3N7Gsp4px1Ka1XzgRTO1pukZ"></script>
+<!-- <script type="text/javascript" src= "http://api.map.baidu.com/geocoder/v2/?ak=GW5NF4cL3N7Gsp4px1Ka1XzgRTO1pukZ&address=Beijing&output=json&callback=showLocation"></script> -->
+<script type="text/javascript" src="http://api.map.baidu.com/cloudgc/v1?ak=GW5NF4cL3N7Gsp4px1Ka1XzgRTO1pukZ&address=101400&callback=showLocation"></script>
+
+
+
+<title>Put your title here</title>
+</head>
+<body>
+Search : <input type="text" id="loc" > 
+<button value="Search" name = "Search" onclick="doLocalSearch();" />Search</button>
+<div id="allmap"></div>
+</body>
+</html>
